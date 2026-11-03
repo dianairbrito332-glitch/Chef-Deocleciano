@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chef Deocleciano Brito — Panificação e confeitaria</title>
+<meta name="description" content="Chef Deocleciano, referência nacional em panificação e confeitaria, com trajetória de excelência técnica, experiência internacional e dedicação à gastronomia brasileira.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light dark;
+  --forest:#0C3A2B;
+  --forest-deep:#07281D;
+  --sun:#F4B400;
+  --leaf:#1F8A4C;
+  --star:#D1342B;
+  --paper:#F3F6F1;
+  --paper-2:#E6ECE4;
+  --ink:#13211A;
+  --ink-soft:#44534A;
+  --line:rgba(19,33,26,.16);
+  --on-forest:#F3F6F1;
+  --on-forest-soft:rgba(243,246,241,.76);
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --text:'Newsreader',Georgia,'Times New Roman',serif;
+  --wrap:1180px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--paper:#0F1A15;--paper-2:#16251E;--ink:#EEF3EC;--ink-soft:#A9B7AD;--line:rgba(238,243,236,.16);--leaf:#4CC27F}
+}
+:root[data-theme="dark"]{--paper:#0F1A15;--paper-2:#16251E;--ink:#EEF3EC;--ink-soft:#A9B7AD;--line:rgba(238,243,236,.16);--leaf:#4CC27F}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--display);line-height:1.04;margin:0;letter-spacing:-.025em}
+h2{font-size:clamp(2rem,4.4vw,3.3rem);font-weight:800;max-width:20ch}
+h3{font-size:1.25rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1em;max-width:62ch}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+section{padding:104px 0}
+@media(max-width:700px){section{padding:68px 0}.wrap{padding:0 20px}}
+.view[hidden]{display:none}
+
+/* Header */
+.bar{position:sticky;top:0;z-index:30;background:var(--forest-deep);color:var(--on-forest);border-bottom:3px solid var(--sun)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.brand{font-family:var(--display);font-weight:800;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-.01em;white-space:nowrap}
+.star{width:14px;height:14px;background:var(--star);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);flex:none}
+.tabs{display:flex;gap:6px;font-family:var(--display);font-weight:700;font-size:.93rem}
+.tabs a{text-decoration:none;color:var(--on-forest-soft);padding:9px 14px;border-radius:3px}
+.tabs a:hover{color:var(--on-forest)}
+.tabs a[aria-current="page"]{background:var(--sun);color:#1A1500}
+@media(max-width:620px){.brand span.nm{display:none}.tabs{margin-left:auto}.tabs a{padding:8px 11px;font-size:.88rem}}
+
+/* Hero */
+.hero{background:var(--forest);color:var(--on-forest);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:var(--sun);clip-path:polygon(64% 0,100% 0,100% 100%,44% 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:end;padding-top:84px}
+.hero-copy{padding-bottom:84px}
+.kicker{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--sun);margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.hero h1{font-size:clamp(2.35rem,5.2vw,4.5rem);font-weight:800;line-height:1.02;letter-spacing:-.035em;max-width:15ch}
+.hero .claim{font-size:1.28rem;color:var(--on-forest);margin:26px 0 0;max-width:36ch;line-height:1.45}
+.hero .sub{font-size:1.1rem;color:var(--on-forest-soft);margin:18px 0 0;max-width:40ch;line-height:1.5;padding-left:18px;border-left:3px solid var(--sun)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.btn{font-family:var(--display);font-weight:700;font-size:1rem;text-decoration:none;padding:16px 28px;border-radius:3px;display:inline-block;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-sun{background:var(--sun);color:#1A1500}
+.btn-line{border:2px solid var(--on-forest-soft);color:var(--on-forest)}
+.btn-dark{background:var(--forest);color:var(--on-forest)}
+.hero-photo{margin:0;align-self:end}
+.hero-photo img{width:100%;max-height:660px;object-fit:cover;object-position:top;border-radius:3px 3px 0 0;box-shadow:0 30px 60px -20px rgba(0,0,0,.55)}
+@media(max-width:900px){
+  .hero::before{clip-path:polygon(0 70%,100% 46%,100% 100%,0 100%)}
+  .hero .wrap{grid-template-columns:1fr;gap:28px;padding-top:52px}
+  .hero-copy{padding-bottom:0}
+  .hero-photo{max-width:380px}
+}
+
+/* Facts */
+.facts{background:var(--forest-deep);color:var(--on-forest)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:32px 24px;border-left:1px solid rgba(243,246,241,.14)}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{display:block;font-family:var(--display);font-size:2.3rem;font-weight:800;line-height:1;margin-bottom:10px;color:var(--sun);letter-spacing:-.03em}
+.fact span{font-size:1rem;color:var(--on-forest-soft);line-height:1.35;display:block;max-width:22ch}
+@media(max-width:760px){
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .fact{padding:24px 16px;border-left:0;border-top:1px solid rgba(243,246,241,.14)}
+  .fact:nth-child(-n+2){border-top:0}
+  .fact:nth-child(odd){padding-left:0}
+}
+
+/* Trajetória (home) */
+.path .head{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:64px}
+.path .head p{margin:0;color:var(--ink-soft)}
+.rail{display:grid;grid-template-columns:repeat(6,1fr);gap:0;list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+.rail li{padding:22px 18px 0 0}
+.rail b{display:block;font-family:var(--display);font-size:1.35rem;font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px}
+.rail span{display:block;font-size:.98rem;line-height:1.4;color:var(--ink-soft)}
+.path .more{margin-top:56px}
+@media(max-width:960px){.rail{grid-template-columns:repeat(3,1fr);row-gap:28px}}
+@media(max-width:700px){.path .head{grid-template-columns:1fr;gap:24px;margin-bottom:40px}.rail{grid-template-columns:1fr 1fr}}
+
+/* Formação */
+.edu{background:var(--paper-2)}
+.edu h2{margin-bottom:56px}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 72px}
+.edu-col h3{font-size:.98rem;font-weight:700;color:var(--leaf);padding-bottom:14px;border-bottom:3px solid var(--ink)}
+.edu-item{padding:20px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:-.015em;line-height:1.2}
+.edu-item small{display:block;font-family:var(--text);font-weight:400;font-size:1rem;color:var(--ink-soft);margin-top:4px;letter-spacing:0}
+@media(max-width:860px){.edu-grid{grid-template-columns:1fr}.edu-col+.edu-col{margin-top:40px}}
+
+/* Reconhecimentos */
+.awards{background:var(--forest);color:var(--on-forest)}
+.awards h2{margin-bottom:56px}
+.awards-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:72px;align-items:center}
+.awards-grid img{border-radius:3px;width:100%;max-height:620px;object-fit:cover;object-position:center 25%;box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+.award{padding:26px 0;border-top:1px solid rgba(243,246,241,.2);display:grid;grid-template-columns:110px 1fr;gap:24px}
+.award:last-child{border-bottom:1px solid rgba(243,246,241,.2)}
+.award time{font-family:var(--display);font-weight:800;font-size:1.15rem;color:var(--sun);line-height:1.2}
+.award h3{font-size:1.35rem;margin-bottom:6px}
+.award p{margin:0;color:var(--on-forest-soft);font-size:1rem;line-height:1.5}
+@media(max-width:860px){.awards-grid{grid-template-columns:1fr;gap:40px}.awards-grid img{max-width:380px}.award{grid-template-columns:1fr;gap:6px}}
+
+/* Galeria */
+.circle h2{margin-bottom:14px}
+.circle .sub{color:var(--ink-soft);margin-bottom:48px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.trio figure{margin:0}
+.trio img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.trio figure:nth-child(2) img{object-position:center 30%}
+figcaption{font-family:var(--display);font-size:.88rem;font-weight:500;color:var(--ink-soft);margin-top:10px;line-height:1.35}
+.wide{margin:20px 0 0}
+.wide img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:center 30%;border-radius:3px}
+@media(max-width:760px){.trio{grid-template-columns:1fr}.trio img{aspect-ratio:1/1;object-position:center 22%}.wide img{aspect-ratio:16/9}}
+
+/* Produtos */
+.products{background:var(--paper-2)}
+.products .top{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.products .top p{margin:0;color:var(--ink-soft);max-width:44ch}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 28px}
+.prod{margin:0}
+.prod .ph{aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:var(--paper)}
+.prod .ph img{width:100%;height:100%;object-fit:cover}
+.prod h3{font-size:1.5rem;margin:20px 0 6px;padding-top:16px;border-top:3px solid var(--ink)}
+.prod .tag{font-style:italic;color:var(--leaf);font-size:1.05rem;margin:0 0 10px}
+.prod .desc{font-size:1rem;color:var(--ink-soft);line-height:1.5;margin:0 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{font-family:var(--display);font-weight:500;font-size:.8rem;padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink-soft)}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+
+
+
+/* História (view) */
+.h-hero{background:var(--forest);color:var(--on-forest);padding:88px 0 0;position:relative;overflow:hidden}
+.h-hero::before{content:"";position:absolute;right:0;top:0;bottom:0;width:38%;background:var(--sun);clip-path:polygon(42% 0,100% 0,100% 100%,0 100%)}
+.h-hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:56px;align-items:end}
+.h-hero h1{font-size:clamp(2.6rem,6.4vw,5.4rem);font-weight:800;line-height:.98;letter-spacing:-.04em;max-width:11ch}
+.h-hero .lede{font-size:1.3rem;color:var(--on-forest-soft);max-width:34ch;margin:26px 0 0;line-height:1.45}
+.h-hero .copy{padding-bottom:84px}
+.h-hero figure{margin:0}
+.h-hero img{width:100%;max-height:560px;object-fit:cover;object-position:top;border-radius:3px 3px 0 0;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+@media(max-width:860px){.h-hero::before{display:none}.h-hero .wrap{grid-template-columns:1fr;gap:32px}.h-hero .copy{padding-bottom:0}.h-hero figure{max-width:340px}}
+
+.h-body{padding:88px 0 96px}
+.h-body .wrap{display:grid;grid-template-columns:260px 1fr;gap:80px;align-items:start}
+.tl{position:sticky;top:96px;list-style:none;margin:0;padding:0 0 0 20px;border-left:3px solid var(--ink)}
+.tl li{position:relative;padding:0 0 18px;font-size:.95rem;line-height:1.35;color:var(--ink-soft)}
+.tl li::before{content:"";position:absolute;left:-27px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--sun);border:2px solid var(--paper)}
+.tl b{display:block;font-family:var(--display);font-weight:800;font-size:1.02rem;color:var(--ink);letter-spacing:-.01em}
+.tl-title{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--leaf);margin:0 0 18px}
+article.story{max-width:680px}
+article.story h2{font-size:clamp(1.7rem,3.2vw,2.35rem);max-width:none;margin:72px 0 24px;padding-top:24px;border-top:3px solid var(--ink)}
+article.story h2:first-child{margin-top:0}
+article.story p{font-size:1.2rem;line-height:1.72;max-width:none}
+article.story figure{margin:44px 0}
+article.story figure img{width:100%;border-radius:3px;max-height:560px;object-fit:cover}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pair img{aspect-ratio:4/5;object-fit:cover;max-height:none}
+.quote{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.2;letter-spacing:-.02em;border-left:6px solid var(--sun);padding-left:22px;margin:48px 0}
+@media(max-width:960px){.h-body .wrap{grid-template-columns:1fr;gap:0}.tl,.tl-title{display:none}}
+
+.end{background:var(--forest);color:var(--on-forest);padding:88px 0}
+.end .wrap{display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between}
+.end h2{max-width:16ch}
+
+/* Rodapé */
+footer{background:var(--forest-deep);color:var(--on-forest);padding:60px 0 44px;position:relative}
+footer::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:linear-gradient(90deg,var(--sun) 0 50%,var(--leaf) 50% 100%)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px;align-items:flex-end}
+footer .name{font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-.02em;line-height:1}
+footer small{display:block;color:var(--on-forest-soft);font-size:.92rem;margin-top:10px}
+footer nav{display:flex;gap:22px;font-family:var(--display);font-weight:700}
+footer nav a{color:var(--sun);text-decoration:none}
+
+
+/* WhatsApp */
+.btn-wa{background:#118C4F;color:#fff;display:inline-flex;align-items:center;gap:10px}
+.btn-wa:hover{background:#0E7A44}
+.prod .btn-wa{margin-top:16px;padding:12px 20px;font-size:.95rem}
+.wa-float{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:40;background:#118C4F;color:#fff;font-family:var(--display);font-weight:700;font-size:.98rem;text-decoration:none;display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)}
+.wa-float:hover{background:#0E7A44}
+@media(max-width:560px){.wa-float{padding:14px;border-radius:50%}.wa-float span{display:none}}
+.top-cta{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.top-cta small{font-family:var(--display);color:var(--ink-soft);font-size:.9rem}
+footer .tel{font-family:var(--display);font-weight:700;color:var(--on-forest);text-decoration:none}
+
+
+/* Faixa de formações */
+.facts .wrap{grid-template-columns:repeat(5,1fr)}
+.fact b{font-size:.95rem;letter-spacing:0;margin-bottom:8px}
+.fact span{font-family:var(--display);font-weight:700;font-size:1.22rem;color:var(--on-forest);line-height:1.2;max-width:none}
+@media(max-width:960px){.facts .wrap{grid-template-columns:1fr 1fr}.fact:last-child{grid-column:1/-1}}
+
+
+/* Experiência na faixa */
+.facts .wrap{grid-template-columns:1.2fr repeat(5,1fr)}
+.facts .fact.exp b{font-size:2.8rem;font-weight:800;letter-spacing:-.035em;margin-bottom:6px}
+.facts .fact.exp span{font-family:var(--text);font-weight:400;font-size:1.05rem;color:var(--on-forest-soft);max-width:16ch;line-height:1.3}
+@media(max-width:960px){
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .facts .fact{padding-left:16px}
+  .facts .fact.exp{grid-column:1/-1}
+  .facts .fact.exp,.facts .fact:nth-child(even){padding-left:0}
+  .facts .fact:nth-child(2){border-top:1px solid rgba(243,246,241,.14)}
+  .facts .fact.exp span{max-width:none}
+}
+
+/* Entrada única */
+.hero-copy,.hero-photo,.h-hero .copy{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-photo{animation-delay:.12s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><span class="star" aria-hidden="true"></span><span class="nm">Chef Deocleciano Brito</span></a>
+    <nav class="tabs" aria-label="Principal">
+      <a href="#inicio" data-tab="inicio">Início</a>
+      <a href="#historia" data-tab="historia">Minha história</a>
+      <a href="#produtos" data-tab="produtos">Produtos</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ INÍCIO ============ -->
+<main id="view-inicio" class="view">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="kicker"><span class="star" aria-hidden="true"></span>Panificação e confeitaria</div>
+        <h1>Chef Deocleciano, referência nacional em panificação e confeitaria</h1>
+        <p class="claim">Trajetória marcada pela excelência técnica, experiência internacional e dedicação à gastronomia brasileira.</p>
+        <p class="sub">Uma história de dedicação que começou aos nove anos de idade e se transformou em reconhecimento, conhecimento e contribuição para a gastronomia.</p>
+        <div class="cta-row">
+          <a class="btn btn-sun" href="#historia">Ler minha história</a>
+          <a class="btn btn-wa" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Encomendar no WhatsApp</a>
+          <a class="btn btn-line" href="#produtos">Ver produtos</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/chef-deocleciano-brito-sorrindo-de-bracos.jpg" alt="Chef Deocleciano Brito sorrindo, de braços cruzados, vestindo o dólmã amarelo e verde dos Embaixadores da Gastronomia Brasileira" width="900" height="1126">
+      </figure>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <div class="fact exp"><b>40 anos</b><span>de experiência na gastronomia</span></div>
+      <div class="fact"><b>Graduação</b><span>Administração de Empresas</span></div>
+      <div class="fact"><b>Graduação</b><span>Gastronomia</span></div>
+      <div class="fact"><b>Pós-graduação</b><span>Alimentação Natural</span></div>
+      <div class="fact"><b>Pós-graduação</b><span>Alimentação Vegetal</span></div>
+      <div class="fact"><b>Pós-graduação</b><span>Cozinha Brasileira</span></div>
+    </div>
+  </div>
+
+  <section class="path" id="trajetoria">
+    <div class="wrap">
+      <div class="head">
+        <h2>Uma carreira construída passo a passo</h2>
+        <p>De ajudante de copeiro a instrutor de panificação e confeitaria. Cada etapa somou prática, gestão ou ensino.</p>
+      </div>
+      <ol class="rail">
+        <li><b>Aos 9 anos</b><span>Primeiro trabalho na Comissaria da Vasco, de ajudante de copeiro a auxiliar de cozinheiro.</span></li>
+        <li><b>Rio de Janeiro</b><span>Aperfeiçoamento em panificação e aulas numa unidade móvel do SENAI.</span></li>
+        <li><b>17 anos</b><span>Gerência administrativa na Pani Lanche: padaria, confeitaria, restaurante e lanchonete.</span></li>
+        <li><b>2005 a 2015</b><span>Instrutor de Panificação e Confeitaria e consultor técnico no SENAI.</span></li>
+        <li><b>2014</b><span>Feira de panificação na França e cursos de pães finos e rústicos em Rouen.</span></li>
+        <li><b>2015 e 2016</b><span>Reconhecimentos no Acre e no cenário nacional da gastronomia.</span></li>
+      </ol>
+      <div class="more"><a class="btn btn-dark" href="#historia">Ler a história completa</a></div>
+    </div>
+  </section>
+
+  <section class="edu" id="formacao">
+    <div class="wrap">
+      <h2>Técnica francesa, base acadêmica sólida</h2>
+      <div class="edu-grid">
+        <div class="edu-col">
+          <h3>Formação acadêmica</h3>
+          <div class="edu-item">Administração de Empresas</div>
+          <div class="edu-item">Gastronomia</div>
+          <div class="edu-item">Pós-graduação em Alimentação Natural</div>
+          <div class="edu-item">Pós-graduação em Alimentação Vegetal</div>
+          <div class="edu-item">Pós-graduação em Cozinha Brasileira</div>
+        </div>
+        <div class="edu-col">
+          <h3>Aperfeiçoamento técnico</h3>
+          <div class="edu-item">Panificação, no Rio de Janeiro<small>Aperfeiçoamento profissional que levou à docência no SENAI móvel.</small></div>
+          <div class="edu-item">Pães finos e pães rústicos, em Rouen, França<small>Cursos especializados em técnicas, processos e tradições da panificação francesa.</small></div>
+          <div class="edu-item">Metodologia francesa<small>Base da panificação e confeitaria que ensinou durante dez anos no SENAI.</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="awards" id="reconhecimentos">
+    <div class="wrap">
+      <h2>Reconhecimentos ao longo da carreira</h2>
+      <div class="awards-grid">
+        <img src="assets/chef-deocleciano-brito-de-terno-e.jpg" alt="Chef Deocleciano Brito de terno e gravata-borboleta apontando para o troféu Prêmio Dólmã 2015" loading="lazy">
+        <div>
+          <div class="award"><time>2015</time><div><h3>Prêmio Dólmã</h3><p>Troféu entregue ao chef.</p></div></div>
+          <div class="award"><time>2015</time><div><h3>Indicado a Melhor Chef de Gastronomia do Acre</h3><p>Reconhecimento que ele descreve como um marco na trajetória.</p></div></div>
+          <div class="award"><time>Fev. 2016</time><div><h3>Embaixador Vitalista da Gastronomia Brasileira</h3><p>Distinção pela contribuição ao setor gastronômico.</p></div></div>
+          <div class="award"><time>Jun. 2016</time><div><h3>Jurado convidado do MasterChef Brasil</h3><p>Participação em 21 de junho de 2016, que ampliou a visibilidade do trabalho.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="circle" id="galeria">
+    <div class="wrap">
+      <h2>Presença no meio gastronômico</h2>
+      <p class="sub">Eventos, feiras e encontros com outros nomes da cozinha brasileira.</p>
+      <div class="trio">
+        <figure><img src="assets/chef-deocleciano-brito-segurando-a-bandeira.jpg" alt="Chef Deocleciano Brito segurando a bandeira do Acre ao lado de Henrique Fogaça" loading="lazy"><figcaption>Com Henrique Fogaça e a bandeira do Acre.</figcaption></figure>
+        <figure><img src="assets/chef-deocleciano-brito-ao-lado-de.jpg" alt="Chef Deocleciano Brito ao lado de Érick Jacquin" loading="lazy"><figcaption>Com Érick Jacquin.</figcaption></figure>
+        <figure><img src="assets/chef-deocleciano-brito-de-bracos-abertos.jpg" alt="Chef Deocleciano Brito de braços abertos no palco da FIGA 21" loading="lazy"><figcaption>No palco da FIGA 21, Feira Internacional da Gastronomia Amazônica.</figcaption></figure>
+      </div>
+      <figure class="wide"><img src="assets/chef-deocleciano-brito-ao-lado-de-2.jpg" alt="Chef Deocleciano Brito ao lado de Fernando de Oliveira em evento de panificação" loading="lazy"><figcaption>Com Fernando de Oliveira, em evento do setor de panificação.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="products" id="produtos">
+    <div class="wrap">
+      <div class="top">
+        <h2>Linha Chef Deo</h2>
+        <p>Pães, temperos e biscoitos assinados por Deocleciano Brito, com técnica de panificação e confeitaria e ingrediente brasileiro.</p>
+        <div class="top-cta"><a class="btn btn-wa" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20encomendar%20produtos%20da%20linha%20Chef%20Deo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Encomendar no WhatsApp</a><small>Pedidos pelo (68) 9 9987-1788</small></div>
+      </div>
+      <div class="grid"><article class="prod"><div class="ph"><img src="assets/pao-caseirinho-chef-deo-coberto-de.jpg" alt="Pão Caseirinho Chef Deo coberto de gergelim, embalado em saco plástico" loading="lazy"></div><h3>Pão Caseirinho</h3><p class="tag">“O sabor que lembra casa”</p><p class="desc">Pão de forno feito com farinha de trigo, leite, ovo e fermento seco. Embalado para durar: 90 dias congelado.</p><ul class="chips"><li>Contém glúten</li><li>Contém lactose</li></ul><a class="btn btn-wa" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20encomendar%3A%20P%C3%A3o%20Caseirinho." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Encomendar</a></article><article class="prod"><div class="ph"><img src="assets/potes-de-sal-premium-de-ervas.jpg" alt="Potes de Sal Premium de Ervas Chef Deo" loading="lazy"></div><h3>Sal Premium de Ervas</h3><p class="tag">“O ouro da culinária saudável.”</p><p class="desc">Sal grosso com manjericão desidratado, orégano, farinha de linhaça dourada, pimenta-do-reino branca e folha de louro.</p><ul class="chips"><li>Não contém glúten</li><li>Alto em sódio</li></ul><a class="btn btn-wa" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20encomendar%3A%20Sal%20Premium%20de%20Ervas." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Encomendar</a></article><article class="prod"><div class="ph"><img src="assets/pote-de-sal-premium-aves-e.jpg" alt="Pote de Sal Premium Aves e Suínos Chef Deo" loading="lazy"></div><h3>Sal Premium Aves e Suínos</h3><p class="tag">“Um toque do Chef, dois sabores irresistíveis.”</p><p class="desc">Tempero com alho e cebola desidratados e urucum para aves e carne suína.</p><ul class="chips"><li>Não contém glúten</li><li>Alto em sódio</li></ul><a class="btn btn-wa" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20encomendar%3A%20Sal%20Premium%20Aves%20e%20Su%C3%ADnos." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Encomendar</a></article><article class="prod"><div class="ph"><img src="assets/pacote-de-biscoito-de-cafe-chef.jpg" alt="Pacote de Biscoito de Café Chef Deo" loading="lazy"></div><h3>Biscoito de Café</h3><p class="tag">“Da Terra do Café para o seu paladar.”</p><p class="desc">Biscoito com café solúvel, açúcar mascavo e amido de milho.</p><ul class="chips"><li>Contém trigo e ovo</li></ul><a class="btn btn-wa" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20encomendar%3A%20Biscoito%20de%20Caf%C3%A9." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Encomendar</a></article><article class="prod"><div class="ph"><img src="assets/pacote-de-biscoito-de-castanha-chef.jpg" alt="Pacote de Biscoito de Castanha Chef Deo" loading="lazy"></div><h3>Biscoito de Castanha</h3><p class="tag">“A crocância que conquista seu paladar.”</p><p class="desc">Biscoito crocante com farinha de castanha-do-pará e amido de milho.</p><ul class="chips"><li>Contém trigo e ovo</li><li>Castanha-do-pará</li></ul><a class="btn btn-wa" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20encomendar%3A%20Biscoito%20de%20Castanha." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Encomendar</a></article><article class="prod"><div class="ph"><img src="assets/pastel-de-nata-dourado-em-forma.jpg" alt="Pastel de nata dourado em forma de alumínio" loading="lazy"></div><h3>Pastel de nata</h3><p class="desc">Massa folhada de camadas crocantes e creme dourado, assado na forma individual.</p><a class="btn btn-wa" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20encomendar%3A%20Pastel%20de%20nata." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Encomendar</a></article></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ HISTÓRIA ============ -->
+<main id="view-historia" class="view" hidden>
+  <div class="h-hero">
+    <div class="wrap">
+      <div class="copy">
+        <div class="kicker"><span class="star" aria-hidden="true"></span>Chef Deocleciano Brito</div>
+        <h1>Conheça minha história</h1>
+        <p class="lede">Minha história na gastronomia começou muito antes de qualquer reconhecimento profissional.</p>
+      </div>
+      <figure><img src="assets/chef-deocleciano-brito-de-dolma-preto.jpg" alt="Chef Deocleciano Brito de dólmã preto, sorrindo e apresentando um prato" width="900" height="1200"></figure>
+    </div>
+  </div>
+
+  <div class="h-body">
+    <div class="wrap">
+      <aside aria-label="Linha do tempo">
+        <p class="tl-title">Linha do tempo</p>
+        <ol class="tl">
+          <li><b>9 anos</b>Comissaria da Vasco</li>
+          <li><b>3 anos</b>Office boy</li>
+          <li><b>Padaria</b>Entregador de pães e depois área administrativa</li>
+          <li><b>Rio de Janeiro</b>Aperfeiçoamento em panificação e SENAI móvel</li>
+          <li><b>17 anos</b>Gerente administrativo na Pani Lanche</li>
+          <li><b>2005 a 2015</b>Instrutor e consultor no SENAI</li>
+          <li><b>2014</b>França e Rouen</li>
+          <li><b>2015</b>Indicado Melhor Chef do Acre</li>
+          <li><b>Fev. 2016</b>Embaixador Vitalista</li>
+          <li><b>21 jun. 2016</b>Jurado no MasterChef Brasil</li>
+        </ol>
+      </aside>
+
+      <article class="story">
+        <h2>Da infância à cozinha</h2>
+        <p>Minha história na gastronomia começou muito antes de qualquer reconhecimento profissional. Começou ainda na infância, com muito trabalho, dedicação e vontade de aprender.</p>
+        <p>Aos nove anos de idade, dei meus primeiros passos no mercado de trabalho, atuando na Comissaria da Vasco, inicialmente como ajudante de copeiro. Com dedicação e esforço, fui conquistando espaço e encerrei minha passagem pela empresa como auxiliar de cozinheiro. Foi ali que comecei a desenvolver minha relação com a cozinha e a descobrir minha vocação profissional.</p>
+
+        <h2>Do pão à administração</h2>
+        <p>Posteriormente, tive uma experiência de três anos trabalhando como office boy. Depois, surgiu uma oportunidade em uma padaria, onde comecei como entregador de pães. Após aproximadamente seis meses, passei a atuar na área administrativa, iniciando uma nova etapa da minha trajetória profissional.</p>
+        <p>Foi nesse período que surgiu uma oportunidade que mudaria minha carreira: viajar ao Rio de Janeiro para realizar um aperfeiçoamento profissional na área de panificação. Durante essa experiência, também tive a oportunidade de compartilhar conhecimentos e ministrar aulas de panificação em uma unidade móvel do SENAI, trabalho que desenvolvi durante um ano e oito meses.</p>
+        <p>Ao retornar, continuei minha trajetória na empresa Pani Lanche, onde assumi a função de gerente administrativo. Durante 17 anos, estive à frente da administração e do desenvolvimento do negócio, participando diretamente de sua transformação. O que inicialmente era uma padaria tornou-se também uma confeitaria, restaurante e lanchonete, ampliando sua atuação e consolidando sua presença no mercado.</p>
+        <p>Paralelamente à experiência prática, busquei ampliar meus conhecimentos na área de gestão e, após o encerramento das atividades da empresa, ingressei na faculdade de Administração de Empresas, fortalecendo minha formação profissional.</p>
+
+        <h2>Uma nova etapa: o ensino e a formação profissional</h2>
+        <p>Em 2005, retornei ao SENAI, onde permaneci durante dez anos, atuando como instrutor dos cursos de Panificação e Confeitaria e também como consultor técnico nessas áreas.</p>
+        <p>Durante esse período, aprofundei meus conhecimentos técnicos e metodológicos, especialmente na panificação e confeitaria fundamentadas na metodologia francesa. Minha atuação passou a envolver não apenas a produção, mas também o ensino, a consultoria e a formação de novos profissionais.</p>
+        <p>Acredito que compartilhar conhecimento é uma das formas mais importantes de contribuir para o desenvolvimento da gastronomia. Por isso, sempre procurei unir experiência prática, aperfeiçoamento técnico e dedicação ao ensino.</p>
+        <figure><img src="assets/chef-deocleciano-brito-de-bracos-abertos.jpg" alt="Chef Deocleciano Brito de braços abertos no palco da FIGA 21" loading="lazy"></figure>
+
+        <h2>Experiência internacional e reconhecimento profissional</h2>
+        <p>A busca constante pelo aperfeiçoamento me levou também à França, referência mundial na tradição da panificação e confeitaria.</p>
+        <p>Em 2014, participei de uma das maiores feiras de panificação do mundo, realizada na França. Na mesma trajetória de aperfeiçoamento internacional, realizei cursos especializados em pães finos e pães rústicos na cidade de Rouen, ampliando meus conhecimentos sobre técnicas, processos e tradições da panificação francesa.</p>
+        <p>Essas experiências contribuíram significativamente para minha formação e para a construção de uma identidade profissional baseada na qualidade, na técnica e na valorização da gastronomia.</p>
+        <figure><img src="assets/chef-deocleciano-brito-ao-lado-de-2.jpg" alt="Chef Deocleciano Brito ao lado de Fernando de Oliveira em evento de panificação" loading="lazy"></figure>
+
+        <h2>Reconhecimento nacional e novos desafios</h2>
+        <p>Ao longo da minha carreira, tive a oportunidade de conquistar importantes reconhecimentos pelo trabalho desenvolvido na gastronomia.</p>
+        <p>Em 2015, fui indicado como Melhor Chef de Gastronomia do Estado do Acre, reconhecimento que representou um marco importante em minha trajetória.</p>
+        <p>Em fevereiro de 2016, recebi o título de Embaixador Vitalista da Gastronomia Brasileira, uma distinção que simboliza a valorização da minha contribuição para o setor gastronômico.</p>
+        <p>Outro momento marcante aconteceu em 21 de junho de 2016, quando participei do programa MasterChef Brasil na condição de jurado, uma experiência de grande relevância que ampliou ainda mais a visibilidade do meu trabalho e da minha trajetória profissional.</p>
+        <figure class="pair2"><div class="pair"><img src="assets/chef-deocleciano-brito-de-terno-e.jpg" alt="Chef Deocleciano Brito segurando o troféu Prêmio Dólmã 2015" loading="lazy"><img src="assets/chef-deocleciano-brito-no-cenario-do.jpg" alt="Chef Deocleciano Brito no cenário do MasterChef Brasil" loading="lazy"></div></figure>
+
+        <h2>Uma carreira construída com dedicação à gastronomia</h2>
+        <p>Atualmente, sigo minha carreira de forma independente, levando comigo toda a experiência adquirida ao longo de décadas de trabalho, estudo, ensino e aperfeiçoamento.</p>
+        <p>Minha trajetória começou aos nove anos, em uma função simples, mas foi construída passo a passo, por meio de oportunidades, desafios e muita dedicação. Passei pela cozinha, pela panificação, pela administração, pelo ensino profissionalizante, pela consultoria técnica e pela experiência internacional.</p>
+        <p>Mais do que preparar pães e desenvolver receitas, minha missão sempre foi valorizar a gastronomia, transmitir conhecimento e contribuir para a formação de profissionais cada vez mais qualificados.</p>
+        <p class="quote">Acredito que a excelência é resultado de trabalho, disciplina, aprendizado contínuo e paixão pelo que se faz.</p>
+        <p>Minha história continua sendo escrita a cada novo projeto, a cada profissional que tenho a oportunidade de ensinar e a cada contribuição que posso oferecer à gastronomia brasileira.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="end">
+    <div class="wrap">
+      <h2>Conheça a linha Chef Deo</h2>
+      <a class="btn btn-sun" href="#produtos">Ver produtos</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="name">Chef Deocleciano Brito</div>
+      <small>Referência em panificação e confeitaria. Do Acre para o Brasil.</small>
+      <small>Encomendas: <a class="tel" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">(68) 9 9987-1788</a></small>
+    </div>
+    <nav aria-label="Rodapé">
+      <a href="#inicio">Início</a>
+      <a href="#historia">Minha história</a>
+      <a href="#produtos">Produtos</a>
+    </nav>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5568999871788?text=Ol%C3%A1%2C%20Chef%20Deo%21%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener" aria-label="Encomendar pelo WhatsApp"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.1 8.1 0 1 1 6.9 3.8Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span>Encomendar</span></a>
+
+<script>
+(function(){
+  var home=document.getElementById('view-inicio'), hist=document.getElementById('view-historia');
+  var tabs=document.querySelectorAll('.tabs a');
+  var titles={inicio:'Chef Deocleciano Brito — Panificação e confeitaria',historia:'Minha história — Chef Deocleciano Brito'};
+  var last=null;
+  function route(){
+    var id=(location.hash||'#inicio').slice(1);
+    var isHist=id==='historia';
+    hist.hidden=!isHist; home.hidden=isHist;
+    var tab=isHist?'historia':(id==='produtos'?'produtos':'inicio');
+    for(var i=0;i<tabs.length;i++){
+      if(tabs[i].getAttribute('data-tab')===tab) tabs[i].setAttribute('aria-current','page'); else tabs[i].removeAttribute('aria-current');
+    }
+    document.title=isHist?titles.historia:titles.inicio;
+    var view=isHist?'historia':'inicio';
+    if(isHist){ window.scrollTo(0,0); }
+    else {
+      var el=document.getElementById(id);
+      if(el && id!=='inicio'){ setTimeout(function(){el.scrollIntoView();},0); }
+      else if(last!==view || id==='inicio'){ window.scrollTo(0,0); }
+    }
+    last=view;
+  }
+  window.addEventListener('hashchange',route);
+  route();
+})();
+</script>
+</body>
+</html>
